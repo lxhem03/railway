@@ -31,7 +31,7 @@ class Config:
             self.BOT_TOKEN = config("BOT_TOKEN")
             self.CACHE_DL = config("CACHE_DL", default=False, cast=bool)
             self.CAP_DECO = config("CAP_DECO", default="◉")
-            self.C_LINK = config("C_LINK", default="@ANi_MiNE")
+            self.C_LINK = config("C_LINK", default="@Animes_Guy")
             self.CMD_SUFFIX = config("CMD_SUFFIX", default=str())
             self.DATABASE_URL = config("DATABASE_URL", default=None)
             self.DBNAME = config("DBNAME", default="ENC")
@@ -47,9 +47,9 @@ class Config:
             self.FCODEC = config("FCODEC", default=None)
             self.FFMPEG = config(
                 "FFMPEG",
-                default='ffmpeg -i "{}" -preset ultrafast -c:v libx265 -crf 27 -map 0:v -c:a aac -map 0:a -c:s copy -map 0:s? "{}"',
+                default='ffmpeg -i "{}" -preset ultrafast -c:v libx265 -crf 30 -map 0:v -c:a aac -map 0:a -c:s copy -map 0:s? "{}"',
             )
-            self.FINISHED_PROGRESS_STR = config("FINISHED_PROGRESS_STR", default="🧡")
+            self.FINISHED_PROGRESS_STR = config("FINISHED_PROGRESS_STR", default="×")
             self.FL_CAP = config("FILENAME_AS_CAPTION", default=False, cast=bool)
             self.FS_THRESHOLD = config("FLOOD_SLEEP_THRESHOLD", default=600, cast=int)
             self.FSTICKER = config("FSTICKER", default=None)
@@ -66,7 +66,7 @@ class Config:
             self.RSS_CHAT = config("RSS_CHAT", default=0, cast=int)
             self.RSS_DELAY = config("RSS_DELAY", default=60, cast=int)
             self.RSS_DIRECT = config("RSS_DIRECT", default=True, cast=bool)
-            self.RELEASER = config("RELEASER", default="A-M|ANi-MiNE")
+            self.RELEASER = config("RELEASER", default="AG")
             self.TELEGRAPH_API = config(
                 "TELEGRAPH_API", default="https://api.telegra.ph"
             )
@@ -76,7 +76,7 @@ class Config:
             self.TG_UL_CLIENT = config("TG_UL_CLIENT", default="pyrogram")
             self.THUMB = config("THUMBNAIL", default=None)
             self.UN_FINISHED_PROGRESS_STR = config(
-                "UN_FINISHED_PROGRESS_STR", default="🤍"
+                "UN_FINISHED_PROGRESS_STR", default="•"
             )
             self.USE_ANILIST = config("USE_ANILIST", default=True, cast=bool)
             self.USE_CAPTION = config("USE_CAPTION", default=True, cast=bool)
