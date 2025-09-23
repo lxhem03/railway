@@ -15,10 +15,10 @@ RUN dnf -qq -y update && \
     dnf clean all
 
 # Install FFmpeg with VP9 and AV1 support
-RUN wget https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2023-12-18-12-47/ffmpeg-n6.1-20231218-linux64-gpl-6.1.tar.xz && \
-    tar -xJf ffmpeg-n6.1-20231218-linux64-gpl-6.1.tar.xz && \
-    cp ffmpeg-n6.1-20231218-linux64-gpl-6.1/bin/* /usr/bin/ && \
-    rm -rf ffmpeg-n6.1-20231218-linux64-gpl-6.1.tar.xz ffmpeg-n6.1-20231218-linux64-gpl-6.1
+RUN wget https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz && \
+    tar -xJf ffmpeg-master-latest-linux64-gpl.tar.xz && \
+    cp ffmpeg-master-latest-linux64-gpl/bin/* /usr/bin/ && \
+    rm -rf ffmpeg-master-latest-linux64-gpl.tar.xz ffmpeg-master-latest-linux64-gpl
 
 # Verify FFmpeg codecs
 RUN ffmpeg -codecs | grep -E 'vp9|av1' || { echo "FFmpeg does not support VP9 or AV1"; exit 1; }
